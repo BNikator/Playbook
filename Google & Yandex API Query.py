@@ -82,7 +82,7 @@ service = build('analytics', 'v4', http = http, discoveryServiceUrl = ('https://
 request = {
     'reportRequests': [
     {
-      'viewId': '116869584',
+      'viewId': 'integer',
       'pageSize': '20001',
       'dateRanges': [{'startDate':'2018-12-01', 'endDate':'2019-02-28'}, {'startDate':'2017-12-01', 'endDate':'2018-02-28'}],
       'metrics': [{'expression':'ga:sessions'}],
@@ -99,7 +99,7 @@ request = {
 request = {
     'reportRequests': [
     {
-      'viewId': '116869584',
+      'viewId': 'integer',
       'pageSize': '50001',
       'dateRanges': [{'startDate':'2018-12-01', 'endDate':'2019-02-28'}, {'startDate':'2017-12-01', 'endDate':'2018-02-28'}],
       'metrics': [{'expression':'ga:uniquePageviews'},{'expression':'ga:entranceRate'},{'expression':'ga:exitRate'}],
@@ -116,7 +116,7 @@ request = {
 request = {
     'reportRequests': [
     {
-      'viewId': '116869584',
+      'viewId': 'integer',
       'pageSize': '50001',
       'dateRanges': [{'startDate':'2018-12-01', 'endDate':'2019-02-28'}],
       'metrics': [{'expression':'ga:pageviews'}],
@@ -138,11 +138,11 @@ print(data_frame)
 #'''
 
 # -----> Yandex API Query <-----
-# ID: 1e5faa50f2a146948095b409769e13f7
-# Пароль: 82c43b7722934a20b14664ecef5ec990
+# ID: string
+# Пароль: string
 # Callback URL: http://localhost
-# Авторизация: https://oauth.yandex.ru/authorize?response_type=token&client_id=1e5faa50f2a146948095b409769e13f7
-# Токены: #access_token=AQAAAAAcMfG1AAWJphvd-Drzhk-UlEXmEuHJ3yI&token_type=bearer&expires_in=15552000
+# Авторизация: https://oauth.yandex.ru/authorize?response_type=token&client_id=string
+# Токены: #access_token=string&token_type=bearer&expires_in=15552000
 
 # Query attributes
 '''
@@ -169,7 +169,7 @@ metrics=<string> {metrics=ym:s:visits}
 # Request parameters to YM
 '''
 request = {
-  'id': 'id=40029655',
+  'id': 'id=integer',
   'preset': 'preset=sources_search_phrases',
   'dimensions': 'dimensions=ym:s:<attribution>SearchEngine,ym:s:startURLPathFull,ym:s:<attribution>SearchPhrase',
   'metrics': 'metrics=ym:s:visits',
@@ -182,7 +182,7 @@ request = {
 
 # Query to YM with property
 '''
-headers = {'Authorization': 'OAuth AQAAAAAcMfG1AAWJphvd-Drzhk-UlEXmEuHJ3yI'}
+headers = {'Authorization': 'OAuth String'}
 url = ['https://api-metrika.yandex.ru/stat/v1/data?' + '&' +
   request['id'] + '&' +
   request['preset'] + '&' +
