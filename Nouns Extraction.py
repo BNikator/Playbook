@@ -67,7 +67,7 @@ def makePlural(nounsList):
             pluralList.append('none')
     return pluralList
 
-# Joining results from previous functions in single function that returns list of results from them
+# Joining results from previous functions in a single function that returns list of results from them
 def nounAnalysis(feed, output):
     # Open feed
     with open(feed, newline='', encoding='utf-8') as csvfile:
